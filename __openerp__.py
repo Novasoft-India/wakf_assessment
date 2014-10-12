@@ -13,13 +13,14 @@
              'BJ_slab_view.xml',
              'security/wakf_assessment_security.xml',
              'security/ir.model.access.csv',
+             'invoice_inherit_view.xml',
              'new_assessment_view.xml',
              'revenue_recovery_view.xml',
              'sale_order_view.xml',
              'showcause_view.xml',
              'wakf_assessment_head_view.xml',
-             'wakf_assessment_view.xml',
              'Arrear_list_view.xml',
+             'wakf_assessment_view.xml',
              ],
     'demo': [],
     'installable': True,
@@ -27,4 +28,3 @@
     'application': True,
 
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
