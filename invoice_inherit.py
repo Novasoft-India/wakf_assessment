@@ -375,17 +375,17 @@ class invoice_inherit(osv.osv):
         return True
         
     _columns = {
-            'registration_no':fields.integer('Registration Number', size=16, required=False,readonly=True),
+            'registration_no':fields.integer('Registration Number', size=16, required=False),
             'fiscal_position': fields.many2one('account.fiscal.position', 'Fiscal Position', readonly=True, states={'draft':[('readonly',False)]}),            
             'date_from':fields.date('From date',required=False),
             'date_to':fields.date('To date',required=False),
             'total_income_saleorder':fields.char('Total Income', size=16, required=False,readonly=True),
             'total_expense_saleorder':fields.char('Total Expense', size=16, required=False,readonly=True),
             'cash_hand_saleorder':fields.char('Cash in Hand', size=16, required=False),
-            'assessment_type':fields.selection((('assessment','Direct Assessment'), ('bj','BJ Assessment'),('rr','Revenue Recovery')),'Assessment Type',required=False,readonly=True), 
+            'assessment_type':fields.selection((('assessment','Direct Assessment'), ('bj','BJ Assessment'),('rr','Revenue Recovery')),'Assessment Type',required=False), 
             #'assess_year_saleorder':fields.char('Assessment Year', size=16, required=True),
-            'assess_year_saleorder':fields.many2one('account.fiscalyear','Account Year',ondelete='set null',readonly=True),
-            'account_year_saleorder':fields.many2one('account.fiscalyear','Assessment Year',ondelete='set null',readonly=True),
+            'assess_year_saleorder':fields.many2one('account.fiscalyear','Account Year',ondelete='set null'),
+            'account_year_saleorder':fields.many2one('account.fiscalyear','Assessment Year',ondelete='set null'),
             'cash_bank_saleorder':fields.char('Cash in Bank', size=16, required=False),
             'revised':fields.boolean('Revised',size=16,readonly=True),
             'order_no':fields.char('Order details',size=16,readonly=True),
